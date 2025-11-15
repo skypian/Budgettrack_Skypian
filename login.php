@@ -54,9 +54,9 @@ unset($_SESSION['login_error']);
                         <div className="absolute inset-x-0 top-0 flex items-center gap-3 bg-black/25 backdrop-blur-[5px] px-6 py-4">
                             <img src="img/evsu_logo.png" alt="EVSU" className="h-10 w-10 object-contain drop-shadow" />
                             <div className="text-white leading-tight drop-shadow">
-                                <div className="font-extrabold tracking-wider text-[26px] md:text-[28px]">EASTERN VISAYAS</div>
+                                <div className="font-extrabold tracking-wider text-[26px] md:text-[28px]">EVSU-OC | BudgetTrack</div>
                                 <div className="mt-1 h-1 bg-[#ffd54a] evsu-underline"></div>
-                                <div className="font-semibold tracking-[.35em] text-xs md:text-sm opacity-95">STATE UNIVERSITY</div>
+                                <div className="font-semibold tracking-[.35em] text-xs md:text-sm opacity-95">EASTERN VISAYAS STATE UNIVERSITY ORMOC CAMPUS</div>
                             </div>
                         </div>
                         {/* Curved divider overlay */}

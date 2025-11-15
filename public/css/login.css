@@ -103,20 +103,20 @@ body {
 
 /* Tailwind-coexisting classes used by React/Tailwind login */
 .login-bg {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('../../img/bg.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)), url('../../img/budget3.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
 }
 
 .left-panel-bg {
-    background-image: url('../../img/bg.png');
+    background-image: url('../../img/gimi.png');
     background-size: cover;
     background-position: center;
 }
 
 .evsu-underline {
-    width: 180px;
+    width: 280px;
 }
 
 .sign-in-title {

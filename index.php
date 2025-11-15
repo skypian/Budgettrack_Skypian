@@ -47,8 +47,12 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
+        .header-gradient {
+            background: linear-gradient(135deg, var(--maroon), var(--maroon-light));
+        }
         .login-btn {
-            background: linear-gradient(135deg, #800000 0%, #5a0000 100%);
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             position: relative;
             overflow: hidden;
             transition: all 0.3s ease;
@@ -67,8 +71,9 @@
             left: 100%;
         }
         .login-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(128, 0, 0, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
         .nav-link {
             position: relative;
@@ -81,21 +86,18 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #800000, #5a0000);
+            background: #ffffff;
             transition: width 0.3s ease;
         }
         .nav-link:hover::after {
             width: 100%;
         }
         .nav-link:hover {
-            color: #800000;
+            color: #ffffff;
             transform: translateY(-2px);
         }
-        .brand-text {
-            background: linear-gradient(135deg, #800000, #5a0000);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .brand-text-white {
+            color: #ffffff;
             font-weight: 800;
         }
         header {
@@ -104,29 +106,25 @@
     </style>
 </head>
 <body class="min-h-screen bg-fixed bg-cover bg-center" style="background-image: linear-gradient(rgba(255,255,255,.53), rgba(255,255,255,.53)), url('assets/img/bg.png');">
-    <header class="fixed top-0 left-0 right-0 z-50 nav-blur bg-white/80 border-b border-gray-200 shadow-lg">
+    <header class="fixed top-0 left-0 right-0 z-50 nav-blur header-gradient border-b border-white/20 shadow-lg">
         <div class="container mx-auto px-6 py-4">
             <nav class="flex items-center justify-between">
-                <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-gradient-to-br from-maroon to-maroon-dark rounded-lg flex items-center justify-center shadow-lg">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
-                    </div>
-                    <span class="brand-text text-2xl font-bold">BudgetTrack</span>
+                <div class="flex items-center space-x-4 -ml-14">
+                    <img src="img/evsu_logo.png" alt="EVSU Logo" class="h-16 w-auto">
+                    <span class="brand-text-white text-2xl font-bold">BudgetTrack</span>
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#policies" class="nav-link text-gray-700 hover:text-maroon font-medium transition-all duration-300">Policies</a>
-                    <a href="#help" class="nav-link text-gray-700 hover:text-maroon font-medium transition-all duration-300">Help</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-maroon font-medium transition-all duration-300">Contacts</a>
+                    <a href="#policies" class="nav-link text-white hover:text-white font-medium transition-all duration-300">Policies</a>
+                    <a href="#help" class="nav-link text-white hover:text-white font-medium transition-all duration-300">Help</a>
+                    <a href="#contact" class="nav-link text-white hover:text-white font-medium transition-all duration-300">Contacts</a>
                     <a href="login.php" class="login-btn px-6 py-3 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                         <span class="relative z-10">Login</span>
                     </a>
                 </div>
                 
                 <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-white hover:bg-white/20 transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -134,11 +132,11 @@
             </nav>
             
             <!-- Mobile menu -->
-            <div id="mobile-menu" class="md:hidden mt-4 pb-4 border-t border-gray-200 hidden">
+            <div id="mobile-menu" class="md:hidden mt-4 pb-4 border-t border-white/20 hidden">
                 <div class="flex flex-col space-y-3 pt-4">
-                    <a href="#policies" class="nav-link text-gray-700 hover:text-maroon font-medium transition-all duration-300 py-2">Policies</a>
-                    <a href="#help" class="nav-link text-gray-700 hover:text-maroon font-medium transition-all duration-300 py-2">Help</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-maroon font-medium transition-all duration-300 py-2">Contacts</a>
+                    <a href="#policies" class="nav-link text-white hover:text-white font-medium transition-all duration-300 py-2">Policies</a>
+                    <a href="#help" class="nav-link text-white hover:text-white font-medium transition-all duration-300 py-2">Help</a>
+                    <a href="#contact" class="nav-link text-white hover:text-white font-medium transition-all duration-300 py-2">Contacts</a>
                     <a href="login.php" class="login-btn px-6 py-3 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-center mt-2">
                         <span class="relative z-10">Login</span>
                     </a>
@@ -147,13 +145,20 @@
         </div>
     </header>
     <main class="pt-20">
-        <section class="hero" style="background-image: linear-gradient(rgba(255,255,255,.50), rgba(255,255,255,.50)), url('img/bg.png'); background-repeat:no-repeat; background-position: top center; background-size: cover;">
+        <section class="hero">
+            <div class="hero-background-carousel">
+                <div class="hero-bg-slide active" style="background-image: url('img/budget1.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="hero-bg-slide" style="background-image: url('img/budget2.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="hero-bg-slide" style="background-image: url('img/budget3.jpg'); background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="hero-split-overlay"></div>
             <div class="container">
                 <div class="hero-content">
-                    <h1>Monitor your budget using our system</h1>
+                    <h1>Your Centralized Budget Monitoring System</h1>
                     <p>BudgetTrack provides real-time visibility into budget allocations, expenditures, and remaining balances for EVSU-Ormoc Campus departments. Streamline financial monitoring with automated updates and comprehensive reporting.</p>
                     <a href="#policies" class="cta-btn">Learn More</a>
                 </div>
+            </div>
         </section>
         <section id="policies" class="section">
             <div class="container">
@@ -328,6 +333,31 @@
                 
                 lastScrollTop = scrollTop;
             });
+            
+            // Preload background images
+            const imageUrls = ['img/budget1.jpg', 'img/budget2.jpg', 'img/budget3.jpg'];
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+            
+            // Background image carousel
+            const slides = document.querySelectorAll('.hero-bg-slide');
+            let currentSlide = 0;
+            
+            // Ensure first slide is visible
+            if (slides.length > 0) {
+                slides[0].classList.add('active');
+            }
+            
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+            
+            // Switch images every 5 seconds
+            setInterval(nextSlide, 5000);
         });
     </script>
 </body>
