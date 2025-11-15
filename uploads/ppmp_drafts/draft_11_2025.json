@@ -1,0 +1,23 @@
+{
+    "fiscal_year": 2025,
+    "rows": [
+        {
+            "item": "Bondpaper",
+            "unit": "Ream",
+            "qty": 10,
+            "unit_cost": 250,
+            "total": 2500,
+            "semester": "1st",
+            "remarks": "For office printing and documentation"
+        },
+        {
+            "item": "ravel Expenses \u2013 Training\/Seminar",
+            "unit": "Person",
+            "qty": 5,
+            "unit_cost": 200,
+            "total": 1000,
+            "semester": "1st",
+            "remarks": "For attendance to capacity-building seminars and workshops"
+        }
+    ]
+}
